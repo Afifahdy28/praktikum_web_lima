@@ -1,0 +1,87 @@
+body{
+	background-image: url(images/cover.jpeg);
+	background-size: auto;
+	}
+h1{
+	background-color: rgba(355, 355, 355, 0.8);
+	width: 400px;
+	margin:10px auto;
+	padding: 15px;
+	text-align: center;
+	}
+
+.container {
+	color: rgb(236, 190, 130);
+	font-family: arial;
+	width: 500px;
+	border:2px solid #fff;
+	background-color:rgba(14, 15, 0, 0.7);
+	line-height: 25px;
+	border-radius: 5px;
+	margin: 40px auto;
+	}
+.chatA {
+	width: 60%;
+	margin-left: 2%;
+	}
+
+.chatA p {
+	background-color:#171b11;
+	line-height: 15px;
+	font-size: 0.8em;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+	}
+
+.chatB {
+	width: 60%;
+	margin-left: 38%;
+	}
+
+.chatB p {
+	background-color: white;
+	color: #131212;
+	line-height: 15px;
+	font-size: 0.8em;
+	padding: 10px;
+	border-radius: 5px;
+	}
+
+.message {
+	text-align: center;
+	margin: 20px 0;
+	}
+
+input {
+	width: 82%;
+	height: 25px; 
+	}
+
+ul li {
+	display: inline-block;
+	color: #161414;
+	margin-right: 20px;
+	background-color: white;
+	padding: 5px 20px;
+	border-radius: 5px;
+	font-size: 15px;
+	}
+
+ul li:hover{
+	cursor: pointer;
+	background-color: #141414;
+	color: white;
+	}
+
+.active {
+	background-color: #141414;
+	color: white;
+	}
+
+.submit {
+	color: #111010;
+	padding-bottom: 3px;
+	width: 10%;
+	height: 30px;
+	}

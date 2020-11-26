@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Form Validasi</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="js/validasi.js"></script>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			background-image: url(images/coverku.jpeg);
+			background-size: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			font-family: "open sans", sans-serif;
+		}
+		.container{
+			background: rgba(225,225,225,0.7);
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0,0.3);
+			width: 400px;
+			min-width: 100px;
+			overflow: hidden;
+
+		}
+		.header{
+			background: rgba(225,225,225,0.7);
+			padding: 20px 40px;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.header h2{
+			margin: 0;
+			text-align: center;
+		}
+		.form{
+			padding: 30px 40px;
+		}
+		.form-control{
+			margin-bottom: 10px;
+			padding-bottom: 20px;
+			position: relative;
+		}
+		.form-control label{
+			display: inline-block;
+			margin-bottom: 2px;
+		}
+		.form-control input{
+			border:2px solid #f0f0f0;
+			border-radius: 4px;
+			display: block;
+			width: 100%;
+			padding:5px;
+			font-size: 14px;
+			font-family: inherit;
+
+		}
+		.form-control select{
+			padding-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h2>Customer Form</h2>
+		</div>
+		<form class="form" id="form">
+			<div class="form-control">
+				<label>Username</label>
+				<input type="text" placeholder="Nama Anda" id="Username" onKeyPress="return maxlength(event)" required="">
+			</div>
+				<div class="form-control">
+				<label>Email</label>
+				<input type="text" placeholder="afifahdy@gmail.com" id="Email" required="">
+			</div>
+				<div class="form-control">
+				<label>Jam Keberangkatan</label>
+				<input type="time" name="Jam" id="jam" required="">
+			</div>
+			<div class="form-control">
+				<label>Tujuan Keberangkatan</label><br></br>
+				<select name="tujuan" id="tujuan" required>
+								<option value="Yogyakarta"> Yogyakarta  </option>
+								<option value="Bali"> Bali  </option>
+								<option value="Malaysia"> Malaysia  </option>
+								<option value="Singapore"> Singapore  </option>
+								<option value="Jepang"> Jepang </option>
+								<option value="Korea"> Korea  </option>
+								<option value="Papua"> Papua  </option>
+								<option value="Arab"> Arab </option>
+								<option value="Turki"> Turki </option>
+								<option value="Jerman"> Jerman </option>
+							</select>	
+				</div>			
+				<div class="form-control">
+				<label>Jumlah Tiket</label>
+				<input  type="text" id="jmltiket" name="jmltiket" placeholder="Jumlah Tiket " onKeyUp="number (this)" maxlength="2" required >
+			</div>
+			<div class="form-control">
+			<input type="submit" onClick="return validasi()" value="submit">
+		</div>
+		</form>
+
+	</div>
+</body>
+</html>

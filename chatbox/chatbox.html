@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chatbox</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1><span>"ChatBox"</span></h1>
+	<hr>
+	<div class="container">
+		<div class="chat">
+		<div class="chatA">
+			<p>With my friend</p>
+		</div>
+
+		<div class="chatB">
+			<p>Hai!! Apa kabar?</p>
+		</div>
+		</div>
+
+		<div class="message">
+			<form method="REQUEST">
+				<div class="side">
+					<ul>
+						<li class="sideA">Pija</li>
+						<li class="sideB">Afi</li>
+					</ul>
+				</div>
+				<input type="text">
+				<button type="submit" class="submit">Send</button>
+			</form>
+		</div>
+	</div>
+<script>
+const chat = document.querySelector('.chat')
+const submit = document.querySelector('.submit');
+const form = document.querySelector('form');
+const sideA = document.querySelector('.sideA');
+const sideB = document.querySelector('.sideB');
+
+sideA.onclick = function () {
+	sideB.classList.remove('active');
+	sideA.classList.add('active');
+	submit.onclick = function () {
+		const textA = document.createElement('div');
+		const pA = document.createElement('p');
+		textA.setAttribute('class', 'chatA');
+		textA.appendChild(pA);
+		let pesan = document.querySelector('input').value;
+		chat.appendChild(textA);
+		pA.innerHTML += pesan + "<br/>";
+		form.reset();
+		return false;	
+	};
+};
+sideB.onclick = function () {
+	sideA.classList.remove('active');
+	sideB.classList.add('active');
+	submit.onclick = function () {
+		const textB = document.createElement('div');
+		const pB = document.createElement('p');
+		textB.setAttribute('class', 'chatB');
+		textB.appendChild(pB);
+		let pesan = document.querySelector('input').value;
+		chat.appendChild(textB);
+		pB.innerHTML += pesan + "<br/>";
+		form.reset();
+		return false;
+	};
+};
+
+</script>
+</body>
+</html>

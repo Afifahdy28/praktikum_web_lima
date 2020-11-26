@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Image Picker</title>
+	<link rel="princesssheet" type="text/css" href="princess.css">
+	<script>
+		function chose(){
+			let list_princess = document.getElementById('princess');
+			let idx = list_princess.selectedIndex;
+			let area_gambar = document.getElementById ("gambar");
+			area_gambar.src = "images/" + list_princess[idx].value + ".jpg";
+			alert("Hai aku adalah Princess " + list_princess[idx].value + ".jpg");
+		}
+	</script>
+</head>
+<body>
+	<div class="img">
+		<h1><b>Princess in Disney</b></h1>
+		<hr>
+		<form id="frm1">
+			Chose your Princess <select id="princess"  onchange="chose()">
+				<option value="Ariel"> Princess Ariel</option>
+				<option value="Aurora"> Princess Aurora </option>
+				<option value="Belle"> Princess Belle </option>
+				<option value="Cinderella"> Princess Cinderella</option>
+				<option value="Jasmine"> Princess Jasmine</option>
+				<option value="Mulan"> Princess Mulan </option>
+				<option value="Pocahontas"> Princess Pocahontas </option>
+				<option value="Snow white"> Princess Snow White </option>
+			</select>
+		</form>
+		<br></br>
+		<img src="images/ariel.jpg" alt="Chose your princess" id="gambar" border="1px">
+	</div>
+</body>
+</html>
